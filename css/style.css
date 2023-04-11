@@ -1,0 +1,57 @@
+/* GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Tilt Prism', cursive;
+    font-family: 'Arimo', sans-serif; */
+}
+:root{
+    --Titulo: 'Tilt Prism', cursive;
+    --paragrafos: 'Arimo', sans-serif;
+}
+
+/* BACKGROUND */
+.bg-main{
+    height: 100vh;
+    background: rgba(115, 153, 26, 0.418);
+    padding: 40px;
+}
+
+
+.titulo{
+    font-family: var(--Titulo);
+    font-size: 3em;
+    letter-spacing: .1em;
+    text-align: center;
+}
+.titu01{
+    font-family: var(--Titulo);
+    font-size: 1.2em;
+    padding-bottom: 50px;
+    letter-spacing: .1em;
+    text-align: center;
+}
+.titulo02{
+    font-family: var(--Titulo);
+    font-size: 1.8em;
+    letter-spacing: .1em;
+
+}
+.resultados{
+    font-family: var(--paragrafos);
+    font-size: 1.5em;
+    padding-bottom: 15px;
+}
+figure{
+    width: 130px;
+}
+figure img{
+    border-radius: 70%;
+}
+figure figcaption{
+    font-family: var(--Titulo);
+    font-size: 1.2em;
+    text-align: center;
+}
