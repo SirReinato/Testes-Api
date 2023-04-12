@@ -4,11 +4,13 @@ async function testeApi01() {
     var convertendoUrl = await pegandoUrl.json();
     var tela = document.getElementById("teste-api01");
     var nome = convertendoUrl.results[0].name;
-    var idade = convertendoUrl.results[0].registered;
-    const endereco = convertendoUrl.results[0].location;
-    const telefone = convertendoUrl.results[0].cell;
-    const email = convertendoUrl.results[0].email;
-    const foto = convertendoUrl.results[0].picture;
+    var idade = convertendoUrl.results[0].dob;
+    var endereco = convertendoUrl.results[0].location;
+    var telefone = convertendoUrl.results[0].cell;
+    var email = convertendoUrl.results[0].email;
+    var foto = convertendoUrl.results[0].picture;
+    var sexo = convertendoUrl.results[0].gender;
+    var login = convertendoUrl.results[0].login;
 
     tela.innerHTML += captandoDados(
       nome,
@@ -16,9 +18,14 @@ async function testeApi01() {
       endereco,
       telefone,
       email,
-      foto
+      foto,
+      sexo,
+      login
     );
-    console.log(convertendoUrl.results[0]);
+    const novoUser = document.getElementById("novoUser");
+    novoUser.addEventListener("click", () => {
+      location.reload();
+    });
     return convertendoUrl;
   } catch (erro) {
     console.log("Esta errado essa porra");
@@ -26,7 +33,16 @@ async function testeApi01() {
 }
 
 // Criando os dados do Usuário
-function captandoDados(nome, idade, endereco, telefone, email, foto) {
+function captandoDados(
+  nome,
+  idade,
+  endereco,
+  telefone,
+  email,
+  foto,
+  sexo,
+  login
+) {
   return `
     <h1 class="titulo">Teste Api 01</h1>
     <h2 class="titu01">Esse teste tem como finalidade criar um usuário aleatório</h2>
@@ -56,22 +72,22 @@ function captandoDados(nome, idade, endereco, telefone, email, foto) {
             <p class="resultados">Estado: ${endereco.state}</p>
             <p class="resultados">Cep: ${endereco.postcode}</p>
             <p class="resultados">Rua: ${
-            endereco.street.number + " , " + endereco.street.name
+              endereco.street.number + " , " + endereco.street.name
             }</p>
             <p class="resultados">Pais: ${endereco.country}</p>
         </div>
         <div> 
-          <h3 class="titulo02">Endereço</h3>
-            <p class="resultados">Cidade: ${endereco.city}</p>
-            <p class="resultados">Estado: ${endereco.state}</p>
-            <p class="resultados">Cep: ${endereco.postcode}</p>
-            <p class="resultados">Rua: ${
-            endereco.street.number + " , " + endereco.street.name
-            }</p>
-            <p class="resultados">Pais: ${endereco.country}</p>
+          <h3 class="titulo02">Sexo</h3>
+            <p class="resultados">${sexo}</p>
+          <h3 class="titulo02">Login</h3>
+            <p class="resultados">Username: ${login.username}</p>
+            <p class="resultados">Senha: ${login.password}</p>
         </div>
     </div>
-    
+    <div class="btn-position">
+      <button class="btn" id="novoUser">Novo Usuário</button>
+    </div>
 `;
 }
+
 console.log(testeApi01());
