@@ -1,0 +1,100 @@
+/* GERAL */
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+:root {
+  --Titulo: "Tilt Prism", cursive;
+  --paragrafos: "Arimo", sans-serif;
+  --textoEscuro: rgba(31, 43, 2, 0.418);
+}
+
+/* BACKGROUND */
+.bg-section {
+  width: 500px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    hsla(220, 22%, 55%, 1) 0%,
+    hsla(221, 45%, 73%, 1) 100%
+  );
+}
+.titulo {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+
+}
+.titu01 {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+.titu01::after {
+    width: 480px;
+    content: "";
+    display: block;
+    border: 1px solid #000;
+    margin: 10px auto;
+  }
+
+/* Container */
+.container {
+  width: 100%;
+}
+
+/* formulario */
+.formulario{
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+.formulario label{
+    font-size: 1.3em;
+    text-align: center;
+    margin: 5px 0;
+}
+.formulario input{
+    height: 30px;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 5px 0;
+    border: 2px solid rgb(110, 123, 150);
+
+    background:  rgb(218, 219, 221);
+    color: #000;
+}
+.btn{
+    font-size: 1.1em;
+    width: 110px;
+    letter-spacing: .1em;
+    padding: 1px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+/* tela, aparecer o significad */
+.tela{
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.tela .cabecalho{
+    font-size: 1.3em;
+    letter-spacing: .1em;
+    padding-bottom: 1px;
+}
+.tela .significados{
+    font-size: 1em;
+    padding-bottom: 10px;
+}

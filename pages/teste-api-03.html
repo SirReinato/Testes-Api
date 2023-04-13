@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/teste-api-02.css" />
+    <title>Teste Api 02</title>
+  </head>
+  <body>
+    <a href="../index.html">Volta</a>
+    <section class="bg-section">
+      <h1 class="titulo">Teste Api 02</h1>
+      <h2 class="titu01">
+        Esse teste tem como finalidade ser um dicionário em Inglês
+      </h2>
+      <div class="container">
+        <form class="formulario">
+          <label for="palavra">Digite a Palavra</label>
+          <input
+            type="text"
+            name="palavra"
+            id="palavra"
+            class="palavra"
+            required
+            placeholder="example"
+          />
+          <button id="btn" class="btn">Pesquisar</button>
+        </form>
+        <div class="tela">
+          <div>
+            <h3 class="cabecalho">Definition</h3>
+            <p class="significados">${difinição}</p>
+            <h3 class="cabecalho">Derivation</h3>
+            <p class="significados">${derivation}</p>
+          </div>
+          <div>
+            <h3 class="cabecalho">Examples</h3>
+            <p class="significados">${examples}</p>
+            <h3 class="cabecalho">Synonyms</h3>
+            <p class="significados">${synonyms}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../script/teste-api-02.js"></script>
+  </body>
+</html>
