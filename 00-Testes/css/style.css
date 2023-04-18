@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+body{
+    background: #5c2f2f;
+}
+.container{
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "section aside"
+        "footer footer"
+    ;
+    grid-gap: 2%;
+}
+.container .header{
+    height: 200px;
+    grid-area: header;
+
+    background: #2d2d2d;
+}
+.container .nav{
+    height: 40px;
+    grid-area: nav;
+
+    background: #806a6a;
+}
+.container .section{
+    grid-area: section;
+
+    background: #806a6a;
+}
+.container .aside{
+    grid-area: aside;
+    padding: 15px;
+    background: #2d2d2d;
+}
+.container .footer{
+    height: 90px;
+    grid-area: footer;
+
+    background: #806a6a;
+}
