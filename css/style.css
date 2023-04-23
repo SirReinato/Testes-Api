@@ -216,6 +216,10 @@ body {
   margin-left: 0;
   text-align: center;
 }
+.quebra-texto .btn:hover {
+  color: var(--Titulo-cor);
+  background: var(--bg-padrao);
+}
 
 .quebra-naBolinha{
   width: 700px;
