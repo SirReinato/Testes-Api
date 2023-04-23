@@ -51,7 +51,7 @@ function captandoDados(
             <figcaption>${nome.first}</figcaption>
         </figure>
 
-        <div>
+        <div class="curriculo02">
             <h3 class="titulo02">Nome</h3>
             <p class="resultados">${nome.title} ${nome.first} ${nome.last}</p>
 
@@ -64,7 +64,7 @@ function captandoDados(
             <h3 class="titulo02">Email</h3>
             <p class="resultados">${email}</p>
         </div>
-        <div> 
+        <div class="curriculo01"> 
           <h3 class="titulo02">Endereço</h3>
             <p class="resultados"><span>Cidade: </span>${endereco.city}</p>
             <p class="resultados"><span>Estado: </span>${endereco.state}</p>

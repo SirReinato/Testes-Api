@@ -43,7 +43,7 @@
      width: 80%;
      display: grid;
      grid-template-columns: 40% 50%;
-     gap: 10px 20px;
+     gap: 1px 20px;
      border-radius: 10px;
      padding: 20px;
      margin: 10px auto;
@@ -54,6 +54,7 @@
   /* imagem da carteirinha */
   .curriculo figure{
     width: 130px;
+    height: 155px;
     padding: 5px;
   }
   .curriculo figure img{
@@ -70,7 +71,12 @@
     background: #000;
     box-shadow: var(--sombra);
   }
-
+  .curriculo .curriculo01{
+    margin-top: -20px;
+  }
+  .curriculo .curriculo02{
+    margin-top: 1px;
+  }
   /* titulos e resultados */
   .titulo02{
     font-family: var(--Titulo);
