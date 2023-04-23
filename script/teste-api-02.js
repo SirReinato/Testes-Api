@@ -1,6 +1,8 @@
 const btn = document.getElementById("btn");
-btn.addEventListener("click", pegandoPalavra);
+const novaPesquisa = document.getElementById("novaPesquisa");
 
+// add o click para disparar a função de criar a tela
+btn.addEventListener("click", pegandoPalavra);
 function pegandoPalavra(event) {
   event.preventDefault();
   const palavra = document.getElementById("palavra");
@@ -26,9 +28,11 @@ async function testeApi02() {
 // Layout da tela de resposta
 function layoutTela(event, converte) {
   return (event.innerHTML += `
-    <div>
+    <div class="after">
       <h3 class="cabecalho">Etimologia</h3>
-      <p class="significados">${converte[0].etymology}</p>
+      <p class="significados"> <span class="enfase">Palavra: ${palavra.value}</span>  ${
+    converte[0].etymology
+  }</p>
       <h3 class="cabecalho">partOfSpeech</h3>
       <p class="significados">${converte[0].partOfSpeech}</p>
       <h3 class="cabecalho">Exemplos</h3>
@@ -36,8 +40,12 @@ function layoutTela(event, converte) {
       <p class="significados">Ex. ${converte[0].meanings[1]}</p>
       <p class="significados">Ex. ${converte[0].meanings[2]}</p>
       <p class="significados">Ex. ${converte[0].meanings[3]}</p>
-    </div>;
+    </div>
+   
   `);
 }
 
-
+novaPesquisa.addEventListener("click", (event) => {
+  event.preventDefault();
+  location.reload();
+});

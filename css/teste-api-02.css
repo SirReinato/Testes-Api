@@ -25,6 +25,19 @@ a {
     hsla(221, 45%, 73%, 1) 100%
   );
 }
+/* Botões do lado de fora */
+.btn-foras-bg{
+  display: flex;
+  justify-content: space-around;
+}
+.btn-fora{
+  width: 100px;
+  text-align: center;
+  border: 1px solid;
+  margin: 10px 0;
+  cursor: pointer;
+  background:hsla(221, 45%, 73%, 1) 100%;
+}
 .titulo {
   font-size: 2em;
   font-weight: bold;
@@ -86,8 +99,13 @@ a {
     width: 70%;
     margin: 0 auto;
     padding: 15px;
-    display: flex;
-    justify-content: space-between;
+}
+.after::after{
+  content: "";
+  width: 70%;
+  display: block;
+  margin: 15px auto;
+  border: 1px solid #000;
 }
 .tela .cabecalho{
     font-size: 1.3em;
@@ -97,4 +115,18 @@ a {
 .tela .significados{
     font-size: 1em;
     padding-bottom: 10px;
+}
+.enfase{
+  font-weight: bold;
+}
+.enfase::after{
+  content: " »";
+  width: 10px;
+  display: inline;
+}
+.enfase::before{
+  content: "« ";
+  width: 10px;
+  height: 10px;
+  display: inline;
 }
