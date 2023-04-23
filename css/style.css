@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+:root {
+  --Titulo: 'Tilt Prism', cursive;
+  --Titulo-cor: #355b73;
+  --paragrafos: 'Arimo', sans-serif;
+  --textoEscuro: #111111;
+  --bg-padrao: #d9d9d9;
+
+  --sombra: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(3, 3, 3, 0.22) 0px 10px 10px;
+}
+body {
+  background: #271414;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "section aside"
+    "quebra01 quebra01"
+    "section02 aside02"
+    "footer footer";
+  grid-gap: 2%;
+}
+
+/* header parte estatica ---------------------------- */
+.container .header {
+  height: 200px;
+  grid-area: header;
+  border-radius: 10px;
+
+  box-shadow: var(--sombra);
+  background: var(--bg-padrao);
+}
+
+.header .redes {
+  display: flex;
+  align-items: center;
+}
+.redes ul {
+  height: 95px;
+  display: block;
+  margin: auto 10px;
+}
+.redes ul li {
+  margin-bottom: 5px;
+}
+.redes figure {
+  width: 221px;
+  height: 157px;
+  margin-top: 24px;
+  margin-left: 30px;
+}
+.redes .textos-header {
+  width: 400px;
+  height: 200px;
+  margin-left: 10px;
+
+  background: url(../img/header/internet.svg);
+}
+.redes .textos-header h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.02em;
+  margin-top: 57px;
+  margin-left: 15px;
+
+  color: #355b73;
+}
+.redes .textos-header h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin-left: 20px;
+
+  color: #101e26;
+}
+.redes .textos-header p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  margin-left: 20px;
+
+  color: #101e26;
+}
+.span {
+  width: 137px;
+  height: 178px;
+  margin-left: 50px;
+}
+.span p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  text-align: right;
+  margin-right: 10px;
+
+  color: rgba(53, 91, 115, 0.8);
+}
+
+/* nav parte estatica ---------------------------- */
+
+.container .nav {
+  height: 60px;
+  grid-area: nav;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  box-shadow: var(--sombra);
+  background: var(--bg-padrao);
+}
+.nav01-itens {
+  display: flex;
+  align-items: center;
+}
+.nav01-itens figcaption {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 5px;
+  letter-spacing: 0.02em;
+
+  color: var(--Titulo-cor);
+}
+/* section apenas formatação no grid, todos os estilos estão no seu próprio css --------------------------------- */
+
+.container .section {
+  grid-area: section;
+  border-radius: 10px;
+
+  box-shadow: var(--sombra);
+  background: var(--bg-padrao);
+}
+
+/* aside aquela hr ---------------------------- */
+.container .aside {
+  grid-area: aside;
+  padding: 15px;
+  border-radius: 10px;
+
+  box-shadow: var(--sombra);
+  background: var(--bg-padrao);
+}
+/* Quebra01  ---------------------------- */
+.container .quebra01 {
+    height: 90px;
+    grid-area: quebra01;
+    border-radius: 10px;
+  
+    box-shadow: var(--sombra);
+    background: var(--bg-padrao);
+  }
+
+  /* section02  ---------------------------- */
+.container .section02 {
+    grid-area: section02;
+    border-radius: 10px;
+  
+    box-shadow: var(--sombra);
+    background: var(--bg-padrao);
+  }
+
+   /* aside02  ---------------------------- */
+.container .aside02 {
+    grid-area: aside02;
+    min-height: 620px;
+    width: 100%;
+    border-radius: 10px;
+  
+    box-shadow: var(--sombra);
+    background: var(--bg-padrao);
+  }
+
+/* footer aquela hr ---------------------------- */
+.container .footer {
+  height: 90px;
+  grid-area: footer;
+  border-radius: 10px;
+
+  box-shadow: var(--sombra);
+  background: var(--bg-padrao);
+}
